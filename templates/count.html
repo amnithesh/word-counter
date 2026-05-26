@@ -1,0 +1,10 @@
+<h1>THERE ARE {{count}}WORDS IN YOUR TEXT</h1>
+
+<a href="{%url 'home'%}">
+    <button type="button"><h3 style="color: green;">COUNT AGAIN </h3></button></a>
+    <h2>yout text:</h2>
+    {{fulltext}}
+    <h1>word Count:</h1>
+    {%for word, counttotal in sortedwords %}
+    <h3>{{word}}:{{counttotal}}</h3>
+    {% endfor %}
